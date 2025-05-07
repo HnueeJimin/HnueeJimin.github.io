@@ -2,7 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const githubBadges = document.querySelectorAll(".github-badge");
   const langSelector = document.getElementById("language");
+  const icon = document.getElementById('themeToggleIcon');
 
+  setTimeout(() => {
+    document.querySelectorAll("section, h2, ul, table, img, .nav-links, #langSelector")
+    .forEach(el => el.classList.add("animate-in"));
+  }, 100);  
+
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    body.classList.remove('light');
+    icon.src = 'images/moon.png';
+  } else {
+    body.classList.add('light');
+    icon.src = 'images/sun.png';
+  }
+  
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     githubBadges.forEach(b => {
       b.classList.add("inverted");
@@ -12,18 +26,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.turnOn = function () {
     body.classList.add("light");
+    document.getElementById("themeToggleIcon").src = 'images/sun.png';
     githubBadges.forEach(b => {
       b.src = "https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white";
     });
     console.log("💡 Light mode activated.");
   };
-
+  
   window.turnOff = function () {
     body.classList.remove("light");
+    document.getElementById("themeToggleIcon").src = 'images/moon.png';
     githubBadges.forEach(b => {
       b.src = "https://img.shields.io/badge/github-ffffff?style=for-the-badge&logo=github&logoColor=black";
     });
     console.log("🌙 Dark mode activated.");
+  };
+  
+  window.toggleTheme = function () {
+    if (document.body.classList.contains('light')) {
+      turnOff();
+    } else {
+      turnOn();
+    }
   };
 
   const elements = {

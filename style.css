@@ -1,6 +1,30 @@
 /* ------------------ 공통 기본 스타일 ------------------ */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-body {
+.animate-in {
+  animation: slideUpFade 0.8s ease-out;
+}
+#themeToggleIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+#themeToggleIcon:hover {
+  filter: brightness(1.2);
+}
+
+body { 
   font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
   margin: 40px;
   line-height: 1.6;
@@ -116,26 +140,6 @@ nav {
 }
 .nav-links a:hover {
   color: #ff9800;
-}
-
-/* 언어 선택 셀렉터 및 아이콘 */
-#langSelector {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-#langSelector select {
-  padding: 4px 8px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #999;
-  background-color: #fff;
-  color: #000;
-}
-#langSelector i {
-  color: #f5f5f5;
-  transition: color 0.3s;
 }
 
 /* ------------------ 다크 모드 ------------------ */
@@ -257,4 +261,25 @@ footer {
   th, td {
     font-size: 14px;
   }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+#nav-a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#nav-b {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }

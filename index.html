@@ -1,134 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자기 소개 홈페이지</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기 소개 홈페이지</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<nav>
-<div class="nav-links">
+<nav class="nav-links">
+  <div id="nav-a">
     <a href="#profile" style="margin: 0 10px;">프로필</a>
     <a href="#skills" style="margin: 0 10px;">기술 스택</a>
     <a href="#projects" style="margin: 0 10px;">프로젝트</a>
     <a href="#experience" style="margin: 0 10px;">활동 경험</a>
     <a href="#awards" style="margin: 0 10px;">수상 경력</a>
     <a href="#research" style="margin: 0 10px;">논문 / 연구 실적</a>
-</div>
-<div id="langSelector">
-  <i class="fas fa-cog"></i>
-  <select id="language">
-    <option value="ko">한국어</option>
-    <option value="en">English</option>
-  </select> 
-</div>
-</nav>  
+  </div>
+  <div id="nav-b">
+    <img id="themeToggleIcon" src="images/sun.png" alt="Theme Toggle" onclick="toggleTheme()">
+      <i class="fas fa-cog"></i>
+    <div id = "nav-b-sel">
+      <select id="language">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    
+  </div>
+</nav>
+
 <body>
-    <section id="profile" style="display: flex; align-items: center; gap: 40px; margin-bottom: 40px;">
-        <img src="images/profile.png" alt="김지민 증명사진" width="180" height="220" style="border-radius: 8px; border: 1px solid #ccc;" />
-        
-        <div>
-        <table style="border-collapse: collapse; font-size: 16px;">
-          <tr>
-            <th id="label-student-id" style="text-align: left; padding: 4px; text-align: center;">학번</th>
-            <td style="padding: 4px; text-align: center;">20201073</td>
-            <th id="label-name" style="text-align: left; padding: 4px; text-align: center;">이름</th>
-            <td id="content-name" style="padding: 4px; text-align: center;">김지민</td>
-          </tr>
-          <tr>
-            <th id="label-goal" style="text-align: left; padding: 4px; text-align: center;">희망 진로</th>
-            <td id="content-goal" colspan="3" style="padding: 4px; text-align: center;">보안 엔지니어 및 연구원, 정보보안 컨설턴트</td>
-          </tr>
-        </table>
+  <section id="profile" style="display: flex; align-items: center; gap: 40px; margin-bottom: 40px;">
+    <img src="images/profile.png" alt="김지민 증명사진" width="180" height="220"
+      style="border-radius: 8px; border: 1px solid #ccc;" />
+    <div class="intro-overlay">
+      <table>
+        <tr>
+          <th id="label-mbti" style="text-align: left; padding: 4px; text-align: center;">MBTI</th>
+          <td style="padding: 4px; text-align: center;">ENFJ</td>
+          <th id="label-sns" style="text-align: left; padding: 4px; text-align: center;">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+              fill="#FF0069">
+              <title>Instagram</title>
+              <path
+                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+            </svg>
+            Instagram
+          </th>
+          <td id="content-sns" style="padding: 4px; text-align: center;">@jimin_e_e</td>
+        </tr>
+        <tr>
+          <td id="self-intro" colspan="4" style="text-align: left; padding: 4px; text-align: center;">자기소개</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table style="border-collapse: collapse; font-size: 16px;">
+        <tr>
+          <th id="label-student-id" style="text-align: left; padding: 4px; text-align: center;">학번</th>
+          <td style="padding: 4px; text-align: center;">20201073</td>
+          <th id="label-name" style="text-align: left; padding: 4px; text-align: center;">이름</th>
+          <td id="content-name" style="padding: 4px; text-align: center;">김지민</td>
+        </tr>
+        <tr>
+          <th id="label-goal" style="text-align: left; padding: 4px; text-align: center;">희망 진로</th>
+          <td id="content-goal" colspan="3" style="padding: 4px; text-align: center;">보안 엔지니어 및 연구원, 정보보안 컨설턴트</td>
+        </tr>
+      </table>
 
-        <table style="border-collapse: collapse; width: 100%; margin-top: 10px;">
-          <thead>
-            <tr style="background-color: #f0f0f0;">
-              <th id="label-period" style="text-align: center; padding: 4px;">입학 / 졸업 연도</th>
-              <th id="label-dept" style="text-align: center; padding: 4px;">학교 및 학과</th>
-            </tr>
-          </thead>
-          <tbody id="major-list">
-            <tr>
-              <td style="padding: 4px; text-align: center;">2020 ~ 현재</td>
-              <td style="padding: 4px; text-align: center;">한남대학교 전기전자공학과</td>
-            </tr>
-            <tr>
-              <td style="padding: 4px; text-align: center;">2020 ~ 현재</td>
-              <td style="padding: 4px; text-align: center;">한남대학교 컴퓨터공학과</td>
-            </tr>
-          </tbody>
-        </table>
+      <table style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+        <thead>
+          <tr style="background-color: #f0f0f0;">
+            <th id="label-period" style="text-align: center; padding: 4px;">입학 / 졸업 연도</th>
+            <th id="label-dept" style="text-align: center; padding: 4px;">학교 및 학과</th>
+          </tr>
+        </thead>
+        <tbody id="major-list">
+          <tr>
+            <td style="padding: 4px; text-align: center;">2020 ~ 현재</td>
+            <td style="padding: 4px; text-align: center;">한남대학교 전기전자공학과</td>
+          </tr>
+          <tr>
+            <td style="padding: 4px; text-align: center;">2020 ~ 현재</td>
+            <td style="padding: 4px; text-align: center;">한남대학교 컴퓨터공학과</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 id="section-skills">📚 기술 스택</h2>
+    <div class="skill-category">
+      <h3>▶ Programming Languages</h3>
+      <div class="badge-group">
+        <img class="badge" src="https://img.shields.io/badge/C-808080?style=for-the-badge&logo=c&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2b%2b&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/C%23-68217A?style=for-the-badge&logo=c-sharp&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+        <img class="badge" src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=R&logoColor=white">
       </div>
-      </section>
+    </div>
 
-        <section id="skills">
-            <h2 id="section-skills">📚 기술 스택</h2>
-            <div class="skill-category">
-            <h3>▶ Programming Languages</h3>
-            <div class="badge-group">
-                <img class="badge" src="https://img.shields.io/badge/C-808080?style=for-the-badge&logo=c&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2b%2b&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/C%23-68217A?style=for-the-badge&logo=c-sharp&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=R&logoColor=white">
-              </div>
-            </div>
-            
-            <div class="skill-category">
-              <h3>▶ Frameworks / Libraries</h3>
-              <div class="badge-group">
-                <img class="badge" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/Microchip-EC1C24?style=for-the-badge&logo=Microchip&logoColor=white">
-              </div>
-            </div>
+    <div class="skill-category">
+      <h3>▶ Frameworks / Libraries</h3>
+      <div class="badge-group">
+        <img class="badge"
+          src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/Microchip-EC1C24?style=for-the-badge&logo=Microchip&logoColor=white">
+      </div>
+    </div>
 
 
-            <div class="skill-category">
-              <h3>▶ Tools / Platforms</h3>
-              <div class="badge-group">
-                <img class="badge" src="https://img.shields.io/badge/linux-908580?style=for-the-badge&logo=linux&logoColor=black">
-                <img class="badge github-badge" src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
-                <img class="badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
-              </div>
-            </div>
-        </section>
+    <div class="skill-category">
+      <h3>▶ Tools / Platforms</h3>
+      <div class="badge-group">
+        <img class="badge"
+          src="https://img.shields.io/badge/linux-908580?style=for-the-badge&logo=linux&logoColor=black">
+        <img class="badge github-badge"
+          src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+        <img class="badge" src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+        <img class="badge"
+          src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+        <img class="badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+      </div>
+    </div>
+  </section>
 
-        <section id="projects">
-            <h2 id="section-projects">💻 프로젝트</h2>
-            <ul>
-                
-            </ul>   
-        </section>
+  <section id="projects">
+    <h2 id="section-projects">💻 프로젝트</h2>
+    <ul>
 
-        <section id="experience">
-          <h2 id="section-experience">📌 활동 경험</h2>
-          <ul>
-          
-          </ul>
-        </section>
-        
-        <section id="awards">
-            <h2 id="section-awards">🏆 수상 경력</h2>
-            <ul id="awards-list">
-              
-            </ul>
+    </ul>
+  </section>
 
-        <section id="research">
-            <h2 id="section-research">📄 논문 / 연구 실적</h2>
-            <ul id="research-list">
-                
-            </ul>
-        </section>
-        
-        <footer>
-            <p>&copy; HnueeJimin. All rights reserved | Official Email: kimjm.hnu@gmail.com</p>
-        </footer>
+  <section id="experience">
+    <h2 id="section-experience">📌 활동 경험</h2>
+    <ul>
 
-        <script src="script.js" defer></script>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2 id="section-awards">🏆 수상 경력</h2>
+    <ul id="awards-list">
+
+    </ul>
+    <section id="research">
+      <h2 id="section-research">📄 논문 / 연구 실적</h2>
+      <ul id="research-list">
+
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; HnueeJimin. All rights reserved | Official Email: kimjm.hnu@gmail.com</p>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
