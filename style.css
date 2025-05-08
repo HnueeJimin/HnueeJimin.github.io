@@ -10,9 +10,38 @@
   }
 }
 
+#profile.animate-in {
+  margin-top: 1rem
+}
+
+/* 프로필 디테일 초기 상태 */
+.profile-details {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 프로필 이미지 호버 시 디테일 등장 및 이동 */
+.profile-image-wrapper:hover + .profile-details {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 프로필 인트로 초기 상태 */
+.profile-intro {
+  transition: transform 0.5s ease;
+  transform: translateX(-245px);
+}
+
+/* 프로필 이미지 호버 시 인트로 이동 */
+.profile-image-wrapper:hover ~ .profile-intro {
+  transform: translateX(0px);
+}
+
 .animate-in {
   animation: slideUpFade 0.8s ease-out;
 }
+
 #themeToggleIcon {
   width: 24px;
   height: 24px;
@@ -163,11 +192,11 @@ body:not(.light) nav {
 body:not(.light) .nav-links a {
   color: #f5f5f5;
 }
-body:not(.light) #langSelector select {
+body:not(.light) #language select {
   background-color: #444;
   color: #fff;
 }
-body:not(.light) #langSelector i {
+body:not(.light) #language i {
   color: #f5f5f5;
 }
 body:not(.light) .badge:hover {
@@ -177,7 +206,7 @@ body:not(.light) .github-badge:hover {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25) !important;
 }
 
-/* ------------------ 라이트 모드 (강제 지정) ------------------ */
+/* ------------------ 라이트 모드 ------------------ */
 
 body.light {
   background-color: #fafafa;
@@ -198,38 +227,12 @@ body.light nav {
 body.light .nav-links a {
   color: #222;
 }
-body.light #langSelector select {
+body.light #language select {
   background-color: #eee;
   color: #000;
 }
-body.light #langSelector i {
+body.light #language i {
   color: #222;
-}
-
-/* ------------------ 토글 버튼 ------------------ */
-
-#toggleMode {
-  padding: 10px 20px;
-  font-size: 15px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
-}
-#toggleMode:hover {
-  background-color: #555;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-body.light #toggleMode {
-  background-color: #e0e0e0;
-  color: #000;
-}
-body.light #toggleMode:hover {
-  background-color: #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ------------------ 푸터 ------------------ */
@@ -282,4 +285,12 @@ footer {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+#language select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background-color: #333;
+  color: #fff;
 }
