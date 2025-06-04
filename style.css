@@ -19,6 +19,8 @@
   opacity: 0;
   transform: translateX(-40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  width: 200px;
+
 }
 
 /* 프로필 이미지 호버 시 디테일 등장 및 이동 */
