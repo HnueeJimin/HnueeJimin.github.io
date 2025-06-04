@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `<a href="https://github.com/woshipubao/Sharing-Project" target="_blank"><strong>스마트 노이즈 캔슬링</strong> - TensorFlow 기반 적응형 AI 기술 (2024-2)</a>`,
         `<a href="https://github.com/HnueeJimin/Project-Napoly" target="_blank"><strong>Napoly</strong> - C++ 멀티스레딩 기반 CLI 마피아 게임 (2024-2)</a>`,
         `<strong>야구 유니폼 웹사이트 만들기</strong> - AWS 기반 웹 서비스 (2025-1)(비공개)`,
+        `<strong>기사의 여행 알고리즘 개발 - 넷플릭스 시리즈 데블스 플랜2 (개인 프로젝트)(예정)</strong>`,
         `<strong>Pay's Maker: 지문 인식 기술 기반 결제 시스템</strong> - 캡스톤디자인 프로젝트 (2025-2)(예정)`,
       ],
 
@@ -133,7 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `<a href="https://github.com/woshipubao/Sharing-Project" target="_blank"><strong>Smart Noise Cancelling</strong> - AI tech using TensorFlow (2024-2)</a>`,
         `<a href="https://github.com/HnueeJimin/Project-Napoly" target="_blank"><strong>Napoly</strong> - CLI Mafia Game using C++ multithreading (2024-2)</a>`,
         `<strong>Baseball Uniform Website</strong> - Web service using AWS (2025-1)(private)`,
-        `<strong>Adaptive Smart Kiosk</strong> - Capstone Design Project (2025-2)(expected)`
+        `<strong>Article Journey Algorithm Development - Netflix Series Devil's Plan 2 (personal project)(expected)</strong>`,
+        `<strong>Pay's Maker: Fingerprint-based Payment System</strong> - Capstone Design Project (2025-2)(expected)`,
       ],
       experience: [
         `<strong>KIISC CISC-S'24 presentation</strong> - Introduction to CycloneDX 1.6 update (2024.06)`,
