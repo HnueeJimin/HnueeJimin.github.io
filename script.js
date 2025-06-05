@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `<a href="https://github.com/woshipubao/Sharing-Project" target="_blank"><strong>Smart Noise Cancelling</strong> - AI tech using TensorFlow (2024-2)</a>`,
         `<a href="https://github.com/HnueeJimin/Project-Napoly" target="_blank"><strong>Napoly</strong> - CLI Mafia Game using C++ multithreading (2024-2)</a>`,
         `<strong>Baseball Uniform Website</strong> - Web service using AWS (2025-1)(private)`,
-        `<strong>Article Journey Algorithm Development - Netflix Series Devil's Plan 2 (personal project)(expected)</strong>`,
+        `<strong>Knight's Tour Algorithm Development - Netflix Series Devil's Plan 2 (personal project)(expected)</strong>`,
         `<strong>Pay's Maker: Fingerprint-based Payment System</strong> - Capstone Design Project (2025-2)(expected)`,
       ],
       experience: [

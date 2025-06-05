@@ -35,3 +35,5 @@
 ---
 
 이 포트폴리오는 외부 템플릿을 사용하지 않고 순수 HTML/CSS/JS로 구성되어 있으며, 각 기능은 모듈화되어 유지보수가 용이하도록 설계되어 있습니다.
+
+GitHub Link - https://github.com/HnueeJimin/HnueeJimin.github.io
